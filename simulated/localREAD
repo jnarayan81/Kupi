@@ -1,0 +1,71 @@
+Understanding files
+#Varaint / Mutant generation
+ perl simuG.pl -refseq SARS-Cov2_COVID_ref.fasta -snp_count 10 -prefix J1
+ perl simuG.pl -refseq SARS-Cov2_COVID_ref.fasta -snp_count 20 -prefix J2
+
+ perl simuG.pl -refseq J1.simseq.genome.fa -snp_count 10 -prefix J1.1
+ perl simuG.pl -refseq J1.simseq.genome.fa -snp_count 10 -prefix J1.2
+
+ perl simuG.pl -refseq J2.simseq.genome.fa -snp_count 10 -prefix J2.1
+ perl simuG.pl -refseq J2.simseq.genome.fa.fasta -snp_count 10 -prefix J2.2
+
+
+#Reads simulation
+../art_bin_MountRainier/art_illumina -ss HS25 -sam -i J2.1.simseq.genome.fa -p -l 150 -f 20 -m 200 -s 10 -o paired_dat_J2.1
+  163  ../art_bin_MountRainier/art_illumina -ss HS25 -sam -i J2.2.simseq.genome.fa -p -l 150 -f 20 -m 200 -s 10 -o paired_dat_J2.2
+  164  ../art_bin_MountRainier/art_illumina -ss HS25 -sam -i J1.1.simseq.genome.fa -p -l 150 -f 20 -m 200 -s 10 -o paired_dat_J1.1
+  165  ../art_bin_MountRainier/art_illumina -ss HS25 -sam -i J1.2.simseq.genome.fa -p -l 150 -f 20 -m 200 -s 10 -o paired_dat_J1.2
+
+  172  ../art_bin_MountRainier/art_illumina -ss HS25 -sam -i SARS-Cov2_COVID_ref.fasta -p -l 150 -f 20 -m 200 -s 10 -o paired_dat_ROOT
+
+#MSA
+clistalw all_seq.fa
+
+#Visualise tree in iTOL website ;)
+
+
+#Now create a next variant 
+#Use J1.2 to evolve
+
+perl simuG.pl -refseq J1.2.simseq.genome.fa -snp_count 10 -prefix J1.2.1
+
+perl ../../../simuG/simuG.pl -refseq J1.2.simseq.genome.fa -snp_count 10 -prefix J1.2.1
+
+[Fri Aug  6 13:36:27 2021]
+Starting simuG ..
+
+[Fri Aug  6 13:36:27 2021]
+Check specified options ..
+Running simuG for SNP/INDEL simulation >>
+Ignore all options for CNV/inversion/translocation simulation.
+
+This simulation use the random seed: 619270800
+
+The option snp_count has been specified: snp_count = 10
+The option titv_ratio has been specified: titv_ratio = 0.5
+
+[Fri Aug  6 13:36:27 2021] Introducing random SNPs based on the following parameters:
+> snp_count = 10
+> titv_ratio = 0.5
+
+[Fri Aug  6 13:36:27 2021]
+Simulation completed! :) 
+
+[Fri Aug  6 13:36:27 2021]
+Generating output files .. 
+
+Generating the correspondance map for genomic variants introduced during simulation:
+J1.2.1.refseq2simseq.map.txt
+
+Generating reference-based vcf file for genomic variants introduced during simulation:
+J1.2.1.refseq2simseq.SNP.vcf
+[Fri Aug  6 13:36:27 2021]
+Done! :) 
+
+
+#Lets create a fake missed sample of variants
+cat J1.1.simseq.genome.fa nextVariant/J1.2.1.simseq.genome.fa > mixedSample/mixed.fa
+
+../../../../art_bin_MountRainier/art_illumina -ss HS25 -sam -i mixed.fa -p -l 150 -f 20 -m 200 -s 10 -o paired_dat_MIXED
+
+

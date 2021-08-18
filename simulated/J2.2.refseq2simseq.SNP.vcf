@@ -1,0 +1,32 @@
+##fileformat=VCFv4.1
+##fileDate=Thu Aug  5 13:03:43 2021 (GMT time)
+##source=simuG.pl
+##INFO=<ID=variant_type,Number=1,Type=String,Description="The type of the introduced genomic variant">
+##INFO=<ID=variant_id,Number=1,Type=String,Description="The id of the introduced genomic variant">
+##INFO=<ID=ref_chr,Number=1,Type=String,Description="The reference genome based chromosome ID of the introduced genomic variant">
+##INFO=<ID=ref_start,Number=1,Type=String,Description="The reference genome based start coordinate of the introduced genomic variant">
+##INFO=<ID=ref_end,Number=1,Type=String,Description="The reference genome based end coordinate of the introduced genomic variant">
+##INFO=<ID=sim_chr,Number=1,Type=String,Description="The simulated genome based chromosome ID of the introduced genomic variant">
+##INFO=<ID=sim_start,Number=1,Type=String,Description="The simulated genome based start coordinate of the introduced genomic variant">
+##INFO=<ID=sim_end,Number=1,Type=String,Description="The simulated genome based end coordinate of the introduced genomic variant">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO
+NC_045512.2	34	.	A	T	.	.	variant_type=SNP;ref_chr=NC_045512.2;ref_start=34;ref_end=34;sim_chr=NC_045512.2;sim_start=34;sim_end=34
+NC_045512.2	4330	.	T	G	.	.	variant_type=SNP;ref_chr=NC_045512.2;ref_start=4330;ref_end=4330;sim_chr=NC_045512.2;sim_start=4330;sim_end=4330
+NC_045512.2	4927	.	C	T	.	.	variant_type=SNP;ref_chr=NC_045512.2;ref_start=4927;ref_end=4927;sim_chr=NC_045512.2;sim_start=4927;sim_end=4927
+NC_045512.2	6363	.	C	T	.	.	variant_type=SNP;ref_chr=NC_045512.2;ref_start=6363;ref_end=6363;sim_chr=NC_045512.2;sim_start=6363;sim_end=6363
+NC_045512.2	6853	.	T	C	.	.	variant_type=SNP;ref_chr=NC_045512.2;ref_start=6853;ref_end=6853;sim_chr=NC_045512.2;sim_start=6853;sim_end=6853
+NC_045512.2	7656	.	T	C	.	.	variant_type=SNP;ref_chr=NC_045512.2;ref_start=7656;ref_end=7656;sim_chr=NC_045512.2;sim_start=7656;sim_end=7656
+NC_045512.2	7914	.	A	C	.	.	variant_type=SNP;ref_chr=NC_045512.2;ref_start=7914;ref_end=7914;sim_chr=NC_045512.2;sim_start=7914;sim_end=7914
+NC_045512.2	8159	.	A	G	.	.	variant_type=SNP;ref_chr=NC_045512.2;ref_start=8159;ref_end=8159;sim_chr=NC_045512.2;sim_start=8159;sim_end=8159
+NC_045512.2	9647	.	T	C	.	.	variant_type=SNP;ref_chr=NC_045512.2;ref_start=9647;ref_end=9647;sim_chr=NC_045512.2;sim_start=9647;sim_end=9647
+NC_045512.2	9834	.	A	C	.	.	variant_type=SNP;ref_chr=NC_045512.2;ref_start=9834;ref_end=9834;sim_chr=NC_045512.2;sim_start=9834;sim_end=9834
+NC_045512.2	17659	.	T	C	.	.	variant_type=SNP;ref_chr=NC_045512.2;ref_start=17659;ref_end=17659;sim_chr=NC_045512.2;sim_start=17659;sim_end=17659
+NC_045512.2	20604	.	A	C	.	.	variant_type=SNP;ref_chr=NC_045512.2;ref_start=20604;ref_end=20604;sim_chr=NC_045512.2;sim_start=20604;sim_end=20604
+NC_045512.2	21406	.	T	C	.	.	variant_type=SNP;ref_chr=NC_045512.2;ref_start=21406;ref_end=21406;sim_chr=NC_045512.2;sim_start=21406;sim_end=21406
+NC_045512.2	21729	.	T	G	.	.	variant_type=SNP;ref_chr=NC_045512.2;ref_start=21729;ref_end=21729;sim_chr=NC_045512.2;sim_start=21729;sim_end=21729
+NC_045512.2	21819	.	T	A	.	.	variant_type=SNP;ref_chr=NC_045512.2;ref_start=21819;ref_end=21819;sim_chr=NC_045512.2;sim_start=21819;sim_end=21819
+NC_045512.2	23780	.	A	C	.	.	variant_type=SNP;ref_chr=NC_045512.2;ref_start=23780;ref_end=23780;sim_chr=NC_045512.2;sim_start=23780;sim_end=23780
+NC_045512.2	23782	.	G	T	.	.	variant_type=SNP;ref_chr=NC_045512.2;ref_start=23782;ref_end=23782;sim_chr=NC_045512.2;sim_start=23782;sim_end=23782
+NC_045512.2	24643	.	T	A	.	.	variant_type=SNP;ref_chr=NC_045512.2;ref_start=24643;ref_end=24643;sim_chr=NC_045512.2;sim_start=24643;sim_end=24643
+NC_045512.2	25304	.	T	A	.	.	variant_type=SNP;ref_chr=NC_045512.2;ref_start=25304;ref_end=25304;sim_chr=NC_045512.2;sim_start=25304;sim_end=25304
+NC_045512.2	28164	.	C	A	.	.	variant_type=SNP;ref_chr=NC_045512.2;ref_start=28164;ref_end=28164;sim_chr=NC_045512.2;sim_start=28164;sim_end=28164
